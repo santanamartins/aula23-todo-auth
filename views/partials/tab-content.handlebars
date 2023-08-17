@@ -1,0 +1,21 @@
+<div class="tab-content px-0 py-3 border border-top-0 bg-white rounded-bottom shadow" id="tab-content">
+    <div class="btn-toolbar px-3 pb-3 border-bottom" role="toolbar" aria-label="Toolbar">
+        <div class="btn-group" role="group" aria-label="ToDo item actions">
+            <button id="btn-add" type="button" class="btn btn-outline-secondary">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button id="btn-remove" type="button" class="btn btn-outline-secondary">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+            <button id="btn-edit" type="button" class="btn btn-outline-secondary">
+                <i class="fas fa-edit"></i>
+            </button>
+        </div>
+    </div>
+    <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="newest-tab"
+        id="newest-pane">
+        <ul id="tab-content" class="list-group list-group-flush">
+            {{> {tabContent} }}
+        </ul>
+    </div>
+</div>

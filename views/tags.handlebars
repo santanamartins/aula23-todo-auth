@@ -1,0 +1,17 @@
+{{> tabs tags='active'}}
+<div class="tab-content px-0 py-3 border border-top-0 bg-white rounded-bottom shadow"
+    id="tab-content">
+
+    <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="newest-tab"
+        id="newest-pane">
+        <ul id="tab-content" class="list-group list-group-flush">
+            {{#each tags as |tag|}}
+            <li class="list-group-item">
+                <h5><span class="badge text-white bg-secondary">{{tag}}</span></h5>
+
+                {{> list items=(lookup ../items tag) }}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

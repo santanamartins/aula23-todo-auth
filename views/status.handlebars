@@ -1,0 +1,16 @@
+<p><a href="/">Home</a></p>
+
+<p>
+{{#if (equals code 'item_add_success') }}
+    Item added successfully.
+{{/if}}
+{{#if (equals code 'item_update_success') }}
+    Item updated successfully.
+{{/if}}
+{{#if (equals code 'item_remove_success') }}
+    Item removed successfully.
+{{/if}}
+{{#if (equals code 'exception') }}
+    An internal failure occurred. Please contact the developers.
+{{/if}}
+</p>

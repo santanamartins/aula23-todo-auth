@@ -1,0 +1,23 @@
+<form id="form-item" method="post">
+    <ul id="tab-content" class="list-group list-group-flush">
+        {{#each items as |item|}}
+        <li class="list-group-item" data-id="{{item.id}}">
+            <div class="row">
+                <div class="col-10">                    
+                    <span class="list-item-desc pr-2">
+                        <a href="/items/edit/{{item.id}}">{{item.description}}</a>
+                    </span>
+                    <span class="badge-container px-1">
+                        {{#each item.tags as |tag|}}
+                        <span class="list-item-badge badge rounded-pill bg-secondary">{{tag}}</span>
+                        {{/each}}
+                    </span>
+                </div>
+                <div class="list-item-deadline col-1 d-flex flex-row-reverse">
+                    {{formatDate item.deadline}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</form>
